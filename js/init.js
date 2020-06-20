@@ -19,18 +19,18 @@
 /* Smooth Scrolling
 ------------------------------------------------------ */
 
-   $('.smoothscroll').on('click',function (e) {
-	    e.preventDefault();
+//    $('.smoothscroll').on('click',function (e) {
+// 	    e.preventDefault();
 
-	    var target = this.hash,
-	    $target = $(target);
+// 	    var target = this.hash,
+// 	    $target = $(target);
 
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 800, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
+// 	    $('html, body').stop().animate({
+// 	        'scrollTop': $target.offset().top
+// 	    }, 800, 'swing', function () {
+// 	        window.location.hash = target;
+// 	    });
+// 	});
 
 
 /*----------------------------------------------------*/
@@ -136,47 +136,81 @@
 /*----------------------------------------------------*/
 /*	contact form
 ------------------------------------------------------*/
-
-   $('form#contactForm button.submit').click(function() {
-
-      $('#image-loader').fadeIn();
-
-      var contactName = $('#contactForm #contactName').val();
-      var contactEmail = $('#contactForm #contactEmail').val();
-      var contactSubject = $('#contactForm #contactSubject').val();
-      var contactMessage = $('#contactForm #contactMessage').val();
-
-      var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
-               '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
-
-      $.ajax({
-
-	      type: "POST",
-	      url: "inc/sendEmail.php",
-	      data: data,
-	      success: function(msg) {
-
-            // Message was sent
-            if (msg == 'OK') {
-               $('#image-loader').fadeOut();
-               $('#message-warning').hide();
-               $('#contactForm').fadeOut();
-               $('#message-success').fadeIn();   
-            }
-            // There was an error
-            else {
-               $('#image-loader').fadeOut();
-               $('#message-warning').html(msg);
-	            $('#message-warning').fadeIn();
-            }
-
-	      }
-
-      });
-      return false;
+$.fn.serializeObject = function()
+{
+   var o = {};
+   var a = this.serializeArray();
+   $.each(a, function() {
+       if (o[this.name]) {
+           if (!o[this.name].push) {
+               o[this.name] = [o[this.name]];
+           }
+           o[this.name].push(this.value || '');
+       } else {
+           o[this.name] = this.value || '';
+       }
    });
+   return o;
+};
 
+// var $form = $('form#contactForm'),
+// url = 'https://script.google.com/macros/s/AKfycbzyxvok8-Skvb2y-g3CusV62eOfrxkrnU427VAgfUdzTM7wzN6G/exec'
 
+// $('form#contactForm button.submit').on('click', function(e) {
+//     $('#image-loader').fadeIn(1000);
+
+//     e.preventDefault();
+//     var jqxhr = $.ajax({
+//         url: url,
+//         method: "GET",
+//         dataType: "json",
+//         data: $form.serializeObject(),
+//         success: function(result) {
+//             console.log("// do something")
+//             if (result == 'success') {
+//                 $('#image-loader').fadeOut(1000);
+//                 $('#message-warning').hide(1000);
+//                 $('#contactForm').fadeOut(1000);
+//                 $('#message-success').hide().fadeIn(1000);   
+//             }
+//             // There was an error
+//             else {
+//                 $('#image-loader').fadeOut(1000);
+//                 $('#message-warning').html(result);
+//                 $('#message-warning').hide().fadeIn(1000);
+//             }
+//         }
+//     });
+// })
+
+    var $form = $('form#contactForm'),
+    url = 'https://script.google.com/macros/s/AKfycbzyxvok8-Skvb2y-g3CusV62eOfrxkrnU427VAgfUdzTM7wzN6G/exec'
+   
+    $('form#contactForm button.submit').click(function() {
+        $('#image-loader').fadeIn();
+        $.ajax({
+            url: url,
+            method: "GET",
+            dataType: "json",
+            data: $form.serializeObject(),
+            success: function(data) {
+                console.log(data.result);
+                // Message was sent
+                if (data.result == 'success') {
+                    $('#image-loader').fadeOut();
+                    $('#message-warning').hide(1000);
+                    $('#message-success').fadeIn(1000);   
+                }
+                // There was an error
+                else {
+                    $('#image-loader').fadeOut(1000);
+                    $('#message-warning').html(result);
+                    $('#message-warning').fadeIn(1000);
+                }
+            }
+        });
+        return false;
+    });
 });
 
 

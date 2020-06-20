@@ -38,7 +38,6 @@
 
 		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
 		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
   	</head>
 
   	<body>
@@ -540,14 +539,15 @@
 					<form action="" method="post" id="contactForm" name="contactForm">
 						<fieldset>
 							<div>
-								<input type="text" value="" placeholder="Name" size="35" id="contactName" name="contactName"> </div>
+								<input type="text" value="" placeholder="Name" size="35" id="contactName" name="name"> </div>
 							<div>
-								<input type="text" value="" placeholder="Email" size="35" id="contactEmail" name="contactEmail"> </div>
+								<input type="text" value="" placeholder="Email" size="35" id="contactEmail" name="email"> </div>
 							<div>
-								<textarea cols="20" rows="5" placeholder="Message" id="contactMessage" name="contactMessage"></textarea>
+								<textarea cols="20" rows="5" placeholder="Message" id="contactMessage" name="message"></textarea>
 							</div>
 							<div>
-								<button class="submit">Submit</button> 
+                                <!-- <button class="submit">Submit</button>  -->
+                                <button type="submit"id="submit-form" class="submit">Submit</button>
 								<span id="image-loader">
 									<img alt="" src="images/loader.gif">
 								</span> 
@@ -582,7 +582,23 @@
 					</div>
 				</aside>
 			</div>
-		</section>
+        </section>
+        <!-- <script>
+            var $form = $('form#contactForm'),
+            url = 'https://script.google.com/macros/s/AKfycbzyxvok8-Skvb2y-g3CusV62eOfrxkrnU427VAgfUdzTM7wzN6G/exec'
+
+            $('#submit-form').on('click', function(e) {
+            e.preventDefault();
+            var jqxhr = $.ajax({
+                url: url,
+                method: "GET",
+                dataType: "json",
+                data: $form.serializeObject()
+            }).success(
+                // do something
+            );
+            })
+        </script> -->
 		<!-- ================================ Contact Ends ============================ -->
 		
 		
