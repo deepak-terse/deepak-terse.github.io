@@ -19,7 +19,7 @@ body {
     width: 100%;
     font-size: calc(10px + 0.33vw);
     color: white;
-    background-color: black;
+    background-color: #222222;
 }
 
 p {
@@ -60,4 +60,20 @@ h1 span {
     font-weight: 500; 
     font-size: 2.2em;
     padding: 1em 0;
+}
+
+a {
+    color: #f2511b;
+}
+
+@media (max-width: 600px) {
+    #image {
+        display:none;
+    }
+    p {
+        font-size: 1.6em;
+    }
+    body {
+        padding: 7.5em 0;
+    }
 }
