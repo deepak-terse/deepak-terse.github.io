@@ -1,0 +1,11 @@
+{
+  "name": "Deepak Terse | Tech Enthusiast, Fitness Freak, Travel Buff",
+  "tagline": "Senior Full Stack Engineer",
+  "description": "Welcome to my personal website! I'm Deepak Terse, a passionate software developer with a love for technology, fitness, and travel. Here, you'll find insights into my projects, thoughts on the latest tech trends, and stories from my adventures around the world. Whether you're here to learn about my work or just want to connect, I'm glad you're here!",
+  "keywords": "Software developer, full-stack web development, DevOps, mobile app development, automation scripts, BI, analytic tools, open-source projects, JavaScript utility libraries, Mumbai, India, sports, nature, traveling, reading",
+  "footerText": "© 2026 Deepak Terse",
+  "socialLinks": [
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/deepak-terse" },
+    { "label": "GitHub", "href": "https://github.com/deepak-terse" }
+  ]
+}

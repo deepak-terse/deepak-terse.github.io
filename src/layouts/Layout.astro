@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+import GoatCounter from '../components/GoatCounter.astro';
+import siteData from '../data/site.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+
+const { title = siteData.name, description = siteData.tagline, keywords = siteData.keywords } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="generator" content={Astro.generator} />
+
+    <meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./favicon_io/site.webmanifest">
+
+    <GoatCounter />
+  </head>
+  <body class="bg-zinc-900 text-zinc-100 min-h-screen">
+    <slot />
+  </body>
+</html>

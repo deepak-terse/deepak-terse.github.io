@@ -1,0 +1,20 @@
+{
+  "name": "deepak-terse.github.io",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^5.17.1",
+    "gsap": "^3.14.2",
+    "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/gsap": "^1.20.2"
+  }
+}

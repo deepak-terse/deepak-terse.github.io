@@ -1,39 +1,50 @@
-<p align="center"><img width="100"src="/favicon_io/android-chrome-512x512.png"></a></p>
+# **Deepak Terse — Personal Portfolio**
 
-<h1 align="center"><strong>My Personal Website</strong></h1>
+[View live site →](https://deepak-terse.github.io)
 
-<div align="center">
-  <strong>
-    My personal website to showcase my skills and work done till now.
-  </strong>
-</div>
+---
 
-<br>
+## **About**
 
-<div align="center">
-  <a href="https://nodejs.org/en/">
-    <img src="https://img.shields.io/badge/HTML-5-orange.svg" alt="HTML version">
-  </a>
-  <a href="https://nodejs.org/en/">
-    <img src="https://img.shields.io/badge/CSS-3-blue.svg" alt="CSS version">
-  </a>
-  <a href="https://nodejs.org/en/">
-    <img src="https://img.shields.io/badge/Javascript-1.8.5-yellow.svg" alt="Javascript version">
-  </a>
-  <a href="https://github.com/deepak-terse/it-wasnt-me">
-    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="LICENSE">
-  </a>
-  <a href="https://medium.com/@iamdeepakterse">
-    <img src="https://img.shields.io/badge/Blog-medium-darkgreen" alt="Blog">
-  </a>
-  <a href="https://github.com/deepak-terse"><img src="https://img.shields.io/badge/Author-deepak--terse-blue" alt="Author deepak-terse"></a>
-</div>
+This portfolio is built with a focus on **content, performance, and maintainability**. Every line of code, animation, and styling choice is guided by a desire to create a **clean, fast, and purposeful user experience**.
 
-<br>
+---
 
-## Licence
+## **Tech Stack & Rationale**
 
-[MIT](https://opensource.org/licenses/MIT)
+| Technology       | Purpose                | Why Chosen                                                                                              |
+| ---------------- | ---------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Astro**        | Static site generation | Generates fast, SEO-friendly HTML with minimal client-side JavaScript. Perfect for content-first sites. |
+| **Tailwind CSS** | Styling                | Utility-first approach keeps styles modular, maintainable, and easy to iterate on.                      |
+| **GSAP**         | Animations             | Lightweight, performant animations that subtly guide attention without overwhelming content.            |
+| **GitHub Pages** | Hosting                | Free, fast, and reliable hosting directly from the repository.                                          |
+| **GoatCounter**  | Analytics              | Privacy-friendly, cookie-free analytics to understand engagement responsibly.                           |
 
-Copyright (c) 2020-present, [deepak-terse](https://github.com/deepak-terse).
+---
 
+## **Design & Coding Philosophy**
+
+* **Minimal & content-first:** Only essential elements are included; projects and links take center stage.
+* **Performance-oriented:** Fast load, minimal JS, optimized assets.
+* **Modular & maintainable:** Reusable components and utility classes for easy updates.
+* **Thoughtful interactivity:** Animations enhance UX without distraction.
+* **Privacy-conscious:** Analytics respect user privacy while providing insights.
+
+---
+
+## **Features**
+
+* Responsive single-page layout
+* Project showcase with GitHub links and live demos
+* Resume download button
+* Social links (GitHub, LinkedIn, etc.) with click tracking
+* Lightweight, privacy-friendly analytics
+* Subtle, purposeful animations
+
+---
+
+## **Screenshot (optional)**
+
+```markdown
+![Portfolio Screenshot](screenshot.png)
+```

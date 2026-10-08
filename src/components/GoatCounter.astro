@@ -1,0 +1,12 @@
+---
+// GoatCounter analytics — only loaded in production
+// Remove the condition and add `data-goatcounter-settings='{"allow_local": true}'` to allow tracking on localhost (for development)
+---
+
+{import.meta.env.PROD && (
+  <script
+    data-goatcounter="https://deepak-terse.goatcounter.com/count"
+    async
+    src="https://gc.zgo.at/count.js"
+  />
+)}

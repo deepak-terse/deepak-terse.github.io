@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Associate Technical Architect",
+    "company": "KGL | Tweddle",
+    "period": "MAR 2024 – present",
+    "location": "Mumbai, India (Hybrid)",
+    "description": "Building a SAAS product from scratch that offers product support solutions for global OEMs. Responsible for evaluating technologies, building POCs, and making design decisions.",
+    "highlights": [
+      "Established monorepo architecture using Turborepo for modular development and reusable components.",
+      "Developed a backend framework on Node.js with Clean Architecture and Vertical Slicing.",
+      "Built AI-powered search using RAG for intelligent content search.",
+      "Designed feature flagging and provisioning system with role- and permission-based access control.",
+      "Built and published NPM packages to GitHub; implemented Analytics framework; integrated Sequelize ORM.",
+      "Set up Unit/Integration testing (Vitest), i18next, Swagger, MUI component library."
+    ]
+  },
+  {
+    "title": "Senior Full Stack Engineer and Pod Lead",
+    "company": "Wysa",
+    "period": "MAY 2021 – JAN 2024",
+    "location": "Bangalore, India (Remote)",
+    "description": "Worked on a mental health product with over 5 million users, 50k MAU, and ~2k concurrent users.",
+    "highlights": [
+      "Planned tech roadmap and oversaw product delivery and maintenance.",
+      "TRD and PR reviews; set development practices; wrote data pipelines and internal tools.",
+      "Platform improvements: upgraded deprecated libraries, refactored legacy code.",
+      "Maintained Dev and Staging environments; developed REST APIs in Sails with Redis, SQS, ELK; integrated NHS, Garmin, etc."
+    ]
+  },
+  {
+    "title": "Technical Consultant and SPOC",
+    "company": "BGauss",
+    "period": "OCT 2020 – MAY 2021",
+    "location": "Mumbai, India (Hybrid)",
+    "description": "Worked with BGauss, an electric automobile company with PAN India presence and 500+ unit sales per month.",
+    "highlights": [
+      "Coordinated with 5–7 vendors for product delivery and maintenance.",
+      "Built a platform for real estate administrators, brokers, and sales teams to manage microsites, leads, and team activities.",
+      "Managed cloud infrastructure (AWS, Mongo Atlas, GoDaddy), Google Business, and marketing tools (SendGrid)."
+    ]
+  },
+  {
+    "title": "Solution Lead",
+    "company": "Sankey Solutions",
+    "period": "AUG 2016 – APR 2020",
+    "location": "Thane, India (On-Site)",
+    "description": "Full-stack web development across multiple projects and technologies; developed leadership skills.",
+    "highlights": [
+      "Wrote APIs and built features in Node.js with microservices, database migration, and authentication.",
+      "Built responsive websites and PWAs using React, Angular, Chrome Dev Tools, Lighthouse.",
+      "Built POC projects with a technology-agnostic approach.",
+      "End-to-end product lifecycle: ideation, wireframes, project plans, delivery, maintenance.",
+      "Managed cloud infrastructure for multiple projects on AWS."
+    ]
+  }
+]

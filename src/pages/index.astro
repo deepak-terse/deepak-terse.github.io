@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import siteData from '../data/site.json';
+---
+
+<Layout title={siteData.name} description={siteData.tagline}>
+  <main class="min-h-screen flex flex-col">
+    <div class="max-w-2xl mx-auto px-4 py-16 flex-1 flex flex-col justify-center">
+      <h1 class="text-3xl font-medium mb-6" data-animate="greeting">
+        Hello!
+      </h1>
+      <p class="text-lg leading-relaxed text-zinc-300" data-animate="intro">
+        I'm Deepak Terse.
+      </p>
+      <p class="mt-4 text-lg leading-relaxed text-zinc-300" data-animate="intro">
+        I'm a software developer based in Mumbai [🇮🇳] who enjoys building useful products and solving real-world problems through code.
+      </p>
+      <p class="mt-4 text-lg leading-relaxed text-zinc-300" data-animate="intro">
+        My primary focus is full-stack web development, with experience in DevOps, mobile apps, analytics, and AI, allowing me to build products end-to-end. I care not just about shipping features, but about clean code, thoughtful UX, and practical usability.
+      </p>
+      <p class="mt-4 text-lg leading-relaxed text-zinc-300" data-animate="intro">
+        Outside of tech, you'll usually find me playing sports, travelling, reading, or spending time in nature.
+      </p>
+      <p class="mt-4 text-lg leading-relaxed text-zinc-300" data-animate="intro">
+        I sometimes write on <a href="/blog" class="font-mono text-[#F2511A] hover:text-[#ff6b3d] underline underline-offset-2">&lt;/blog&gt;</a>.
+        I also share some of my work on <a href="/experience" class="font-mono text-[#F2511A] hover:text-[#ff6b3d] underline underline-offset-2">&lt;/experience&gt;</a>.
+      </p>
+      {siteData.socialLinks && siteData.socialLinks.length > 0 && (
+        <p class="mt-8 flex flex-wrap gap-4" data-animate="social">
+          {siteData.socialLinks.map((link: { label: string; href: string }) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-goatcounter-click={`social:${link.label.toLowerCase()}`}
+              class="text-sm text-[#F2511A] hover:text-[#ff6b3d] underline underline-offset-2"
+            >
+              {link.label}
+            </a>
+          ))}
+        </p>
+      )}
+    </div>
+    <Footer />
+  </main>
+  <script>
+    (async () => {
+      if (document.readyState === 'loading') {
+        await new Promise((r) => document.addEventListener('DOMContentLoaded', r));
+      }
+      const { default: initAnimations } = await import('../scripts/home-animations');
+      initAnimations();
+    })();
+  </script>
+</Layout>

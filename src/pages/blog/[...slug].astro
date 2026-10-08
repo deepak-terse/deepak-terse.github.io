@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title}>
+  <main class="min-h-screen flex flex-col">
+    <article class="max-w-2xl mx-auto px-4 py-16 flex-1">
+      <header class="mb-8">
+        <h1 class="text-3xl font-medium mb-2">{post.data.title}</h1>
+        <time class="text-sm text-zinc-400" datetime={post.data.pubDate.toISOString()}>
+          {post.data.pubDate.toLocaleDateString()}
+        </time>
+      </header>
+      <div class="prose prose-invert prose-zinc max-w-none">
+        <Content />
+      </div>
+      <p class="mt-8">
+        <a href="/blog" class="font-mono text-[#F2511A] hover:text-[#ff6b3d] underline underline-offset-2">
+          &lt;/blog&gt;
+        </a>
+      </p>
+    </article>
+    <Footer />
+  </main>
+</Layout>

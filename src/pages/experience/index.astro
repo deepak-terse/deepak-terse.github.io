@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/Footer.astro';
+import siteData from '../../data/site.json';
+import experienceData from '../../data/experience.json';
+---
+
+<Layout title="Experience" description={`Experience — ${siteData.name}`}>
+  <main class="min-h-screen flex flex-col">
+    <div class="max-w-2xl mx-auto px-4 py-16 flex-1">
+      <h1 class="text-3xl font-medium mb-10">Experience</h1>
+      <div class="space-y-12">
+        {experienceData.map((job: { title: string; company: string; period: string; location?: string; description: string; highlights?: string[] }) => (
+          <article>
+            <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+              <h2 class="text-xl font-medium text-zinc-100">{job.title}</h2>
+              <span class="text-zinc-500">·</span>
+              <span class="text-[#F2511A] font-medium">{job.company}</span>
+            </div>
+            <p class="text-sm text-zinc-400 mt-1">
+              {job.period}
+              {job.location && ` · ${job.location}`}
+            </p>
+            <p class="mt-3 text-zinc-300 leading-relaxed">
+              {job.description}
+            </p>
+            {job.highlights && job.highlights.length > 0 && (
+              <ul class="mt-3 list-disc list-inside space-y-1 text-zinc-400 text-sm">
+                {job.highlights.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            )}
+          </article>
+        ))}
+      </div>
+      <p class="mt-10">
+        <a href="/" class="font-mono text-[#F2511A] hover:text-[#ff6b3d] underline underline-offset-2">
+          &lt;/home&gt;
+        </a>
+      </p>
+    </div>
+    <Footer />
+  </main>
+</Layout>
