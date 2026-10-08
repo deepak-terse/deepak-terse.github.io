@@ -1,52 +1,395 @@
-<!DOCTYPE html>
-<html lang="en">
-  	<head>
-		<title>
-			Deepak Terse | Tech Enthisiast, Fitness Freak, Travel Buff
-		</title>
-		<meta charset="utf-8" />
-		<meta name="description" content="Software developer based in Mumbai passionate about problem-solving, with expertise in full-stack web development, DevOps, mobile app development, automation scripts, BI, and analytic tools. Looking forward to contributing to open-source projects, particularly in JavaScript utility libraries, in 2024.">
-		<meta name="author" content="Deepak Terse">
-		<meta name="keywords" content="Software developer, full-stack web development, DevOps, mobile app development, automation scripts, BI, analytic tools, open-source projects, JavaScript utility libraries, Mumbai, India, sports, nature, traveling, reading">
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#f3f5f6" />
 
-		<meta name="robots" content="index, follow">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Deepak Terse — Technical Architect &amp; AI Engineer</title>
+	<meta name="description" content="Deepak Terse is a Technical Architect and AI Engineer who likes solving problems with tech. Explore his journey and projects." />
+	<link rel="canonical" href="https://deepak-terse.github.io/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://deepak-terse.github.io/" />
+	<meta property="og:title" content="Deepak Terse — Technical Architect &amp; AI Engineer" />
+	<meta property="og:description" content="Currently writing core code, adapting to new AI tech, and looking for my next big challenge." />
+	<meta property="og:image" content="https://deepak-terse.github.io/assets/images/og-image.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json">
+		{"@context":"https://schema.org","@type":"Person","name":"Deepak Terse","jobTitle":"Technical Architect & AI Engineer","url":"https://deepak-terse.github.io/","sameAs":["https://github.com/deepak-terse","https://www.linkedin.com/in/deepak-terse/"]}
+	</script>
 
-		<link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
-        <link rel="manifest" href="./favicon_io/site.webmanifest">
+	<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-        <link defer rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,500,700">
-        
-        <link rel="stylesheet" href="./css/main.css">
-  	</head>
+	<!-- Applies the saved theme before first paint (prevents a flash). No saved theme = follow the OS. -->
+	<script>
+		try {
+			const t = localStorage.getItem("deepak-theme");
+			if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+		} catch {}
+	</script>
 
-  	<body>
-		<div id = "bio" class = "section">
-			<h1 id = "title">
-				Hello 
-				<span>👋🏻</span> 
-			</h1>
-			<h2 id = "subtitle">
-				My name is <b style="color:#f2511b">Deepak Terse</b>.
-			</h2>
-			<p>
-				I'm a software developer based in Mumbai (🇮🇳) who is passionate about problem-solving. My primary expertise and focus lies in <span style="color:#f2511b">full-stack web development</span> and <span style="color:#f2511b">DevOps</span>. However, I'm also familiar with mobile app development, automation scripts, BI and analytic tools enabling me to approach projects holistically.	
-			</p>
-			<p>
-				Looking ahead to 2024, I'm excited to contribute to open-source projects, particularly in JavaScript utility libraries, where I aim to make a positive impact and expand my skill set further.
-			</p>
-			<p>
-				Outside of coding, I stay active through sports and find peace in nature. My other hobbies include travelling and reading.
-			</p>
-			<p>
-				Connect with me on <a href="https://www.linkedin.com/in/deepak-terse/"  target="_blank">LinkedIn</a> to learn more about my professional journey, follow my latest projects on <a href="https://github.com/deepak-terse"  target="_blank">GitHub</a>, and explore my insights on various topics through my blogs on <a href="https://medium.com/@iamdeepakterse"  target="_blank">Medium</a>. I'm always open to collaborations and networking opportunities.
-			</p>
+	<link rel="stylesheet" href="styles.css" />
+	<script src="script.js" defer></script>
+</head>
+
+<body>
+	<!-- Icon sprite: reference with <svg class="icon"><use href="#i-name"/></svg> -->
+	<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+		<symbol id="i-external" viewBox="0 0 24 24">
+			<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+		</symbol>
+		<symbol id="i-download" viewBox="0 0 24 24">
+			<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+		</symbol>
+		<symbol id="i-sun" viewBox="0 0 24 24">
+			<circle cx="12" cy="12" r="4" />
+			<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+		</symbol>
+		<symbol id="i-moon" viewBox="0 0 24 24">
+			<path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6.5 6.5 0 0 0 8.268 8.268c.344-.215.825-.003.803.401Z" />
+		</symbol>
+	</svg>
+
+	<a class="skip" href="#main">Skip to content</a>
+
+	<main id="main">
+
+		<!-- ============ HERO ============ -->
+		<section id="hero" class="chapter hero" aria-labelledby="hero-title">
+			<div class="chapter-inner">
+			<div class="hero-layout">
+				<div class="hero-copy">
+					<h1 id="hero-title">Hey, I’m<br /><span>Deepak.</span></h1>
+					<p class="hero-intro">I design systems, build AI solutions, and write code.</p>
+					<p class="muted">
+						A Technical Architect and Engineer with a decade of hands-on experience solving complex problems. I focus on thinking holistically, making critical stack decisions, and building clean, production software.
+						<br><br>
+						Currently writing core code, adapting to new AI tech, and looking for my next big challenge.
+					</p>
+					<div class="hero-links">
+						<a class="hero-link" href="https://github.com/deepak-terse" target="_blank" rel="noopener noreferrer">
+							GitHub <svg class="icon external-icon" aria-hidden="true"><use href="#i-external" /></svg>
+						</a>
+						<a class="hero-link" href="https://www.linkedin.com/in/deepak-terse" target="_blank" rel="noopener noreferrer">
+							LinkedIn <svg class="icon external-icon" aria-hidden="true"><use href="#i-external" /></svg>
+						</a>
+						<a class="resume-download" href="assets/documents/deepak-terse-resume.pdf" download>
+							<svg class="icon" aria-hidden="true"><use href="#i-download" /></svg>
+							Download resume
+						</a>
+					</div>
+				</div>
+
+				<!-- LCP image: eager + high priority. Do NOT lazy-load. -->
+				<figure class="portrait">
+					<img src="assets/images/profile-photo.webp" width="800" height="1200" fetchpriority="high" decoding="async" alt="Portrait of Deepak Terse" />
+					<figcaption>At Rajmachi fort, Maharashtra</figcaption>
+				</figure>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ ABOUT ============ -->
+		<section id="about" class="chapter about" aria-labelledby="about-title">
+			<div class="chapter-inner">
+				<div>
+					<div class="chapter-label"><span aria-hidden="true">01</span><span>ABOUT ME</span></div>
+					<h2 id="about-title" class="section-title">A little<br />about me.</h2>
+				</div>
+				<div class="about-copy">
+					<p>
+						I've always liked building things. Even before software became my thing, I enjoyed coming up with ideas, making little projects, and seeing if I could turn them into something real.
+					</p>
+					<p>
+						That hasn't really changed. I still like starting with an idea, figuring things out as I go, and seeing where it takes me. Sometimes it's a side project, sometimes an experiment, and sometimes just something I wanted to try.
+					</p>
+					<p>
+						I enjoy the problem-solving side of building — figuring out what actually needs to be built, making trade-offs, and finding a simple way forward. Side projects and open source give me a way to keep doing that outside of work.
+					</p>
+					<p>
+						Outside of tech, I like staying active, travelling, trekking, playing sports, and occasionally getting lost in a good documentary or movie.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ EXPERIENCE (copy an <li> to add an entry) ============ -->
+		<section id="timeline" class="chapter" aria-labelledby="timeline-title">
+			<div class="chapter-inner">
+				<div class="chapter-label"><span aria-hidden="true">02</span><span>EXPERIENCE</span></div>
+				<h2 id="timeline-title">A brief timeline</h2>
+
+				<ol class="timeline-list">
+					<li>
+						<div class="date">2013 – 2016</div>
+						<div class="timeline-body">
+							<h3>Curiosity</h3>
+							<div class="company">KJ Somaiya college, Mumbai</div>
+							<p>
+								College was where technology became more than a subject. Mini projects, coding competitions and constant experimentation turned curiosity into a genuine passion for building software.
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="date">2016 – 2020</div>
+						<div class="timeline-body">
+							<h3>Breadth</h3>
+							<div class="company">Sankey Solutions</div>
+							<p>
+								Working at an early-stage services startup meant moving between technologies, domains, and client problems. I learned to get comfortable with unfamiliar territory and adapt the solution to the problem, rather than the other way around.
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="date">2020 – 2021</div>
+						<div class="timeline-body">
+							<h3>Ownership</h3>
+							<div class="company">5D Wiki &amp; BGauss</div>
+							<p>
+								This was when engineering started becoming much bigger than code. Estimation, infrastructure, vendors, stakeholders, timelines, and business constraints all became part of the problem.
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="date">2021 – 2024</div>
+						<div class="timeline-body">
+							<h3>Scale</h3>
+							<div class="company">Wysa</div>
+							<p>
+								At Wysa, I worked on a product used by millions of people and increasingly complex platform problems. Data pipelines, high-concurrency systems, platform modernization, and engineering practices pushed me to think more about systems than individual features.
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="date">2024 – now</div>
+						<div class="timeline-body">
+							<h3>Architecture + AI</h3>
+							<div class="company">KGL &amp; Tweddle</div>
+							<p>
+								I moved further into architecture, working on platforms from the ground up and making decisions that affect entire systems. Multi-tenant architecture, reusable engineering foundations, and AI-powered features have brought together a lot of what I've learned along the way.
+							</p>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============ PROJECTS (copy an <article> to add a project) ============ -->
+		<section id="projects" class="chapter" aria-labelledby="projects-title">
+			<div class="chapter-inner">
+				<div class="chapter-label"><span aria-hidden="true">03</span><span>PERSONAL PROJECTS</span></div>
+
+				<div class="projects-header">
+					<h2 id="projects-title" class="section-title">Things I've<br />built.</h2>
+					<p class="projects-intro">
+						A few things I built because I wanted to learn something new, explore an idea, or solve a problem — for myself or for someone else.
+					</p>
+				</div>
+
+				<div class="project-list">
+					<article class="project">
+						<div class="project-number" aria-hidden="true">01</div>
+						<div class="project-content">
+							<div class="project-heading"><h3>News Platform</h3></div>
+							<p>
+								I started with a simple question: could I build a better way to discover and read news? What followed was several months of research, feasibility work, and navigating the practical and compliance challenges of running an RSS-based news platform. I built the ingestion and processing pipeline, worked on article clustering, deduplication, semantic search, and personalization, and eventually realized the bigger opportunity was somewhere else.
+							</p>
+							<p>The project ultimately pivoted into a daily hyperlocal newsletter.</p>
+						</div>
+						<div class="project-aside">
+							<span class="project-aside-label">Engineering highlight</span>
+							<p>Built an end-to-end news pipeline for ingestion, deduplication, semantic clustering, and personalized delivery.</p>
+							<ul class="tags" aria-label="Technologies and focus areas">
+								<li>RSS</li><li>Search</li><li>Data</li><li>AI</li><li>Personalization</li>
+							</ul>
+							<a class="project-link" href="https://github.com/deepak-terse/brief-engine" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub: News Platform">
+								View on GitHub <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+							</a>
+						</div>
+					</article>
+
+					<article class="project">
+						<div class="project-number" aria-hidden="true">02</div>
+						<div class="project-content">
+							<div class="project-heading"><h3>JARVIS</h3></div>
+							<p>
+								I'm a Marvel fan, so naturally I wanted my own JARVIS. What started as a fun experiment became a local AI assistant for things I actually wanted help with — searching the web, managing reminders and notes, logging work, maintaining context, and experimenting with agentic workflows.
+							</p>
+							<p>It's still a project I come back to whenever I want to explore an idea or try a new approach to AI.</p>
+						</div>
+						<div class="project-aside">
+							<span class="project-aside-label">Engineering highlight</span>
+							<p>Designed a local-first assistant with contextual memory and tool-driven workflows for everyday tasks.</p>
+							<ul class="tags" aria-label="Technologies and focus areas">
+								<li>Local AI</li><li>Voice</li><li>Agents</li><li>Automation</li>
+							</ul>
+						</div>
+					</article>
+
+					<article class="project">
+						<div class="project-number" aria-hidden="true">03</div>
+						<div class="project-content">
+							<div class="project-heading"><h3>AI Summarizer</h3></div>
+							<p>
+								When Chrome introduced built-in AI capabilities, I wanted to see what could be built with them. Rather than making another tool that simply summarizes a page, I explored the whole journey: read → understand → test what you learned.
+							</p>
+							<p>That led to a Chrome extension that can summarize pages, answer questions, and generate quizzes, with the AI running on-device.</p>
+						</div>
+						<div class="project-aside">
+							<span class="project-aside-label">Engineering highlight</span>
+							<p>Used browser-native AI to keep page summaries, Q&amp;A, and quizzes running privately on-device.</p>
+							<ul class="tags" aria-label="Technologies and focus areas">
+								<li>Chrome</li><li>AI</li><li>On-device</li>
+							</ul>
+							<a class="project-link" href="https://github.com/deepak-terse/saar-ai" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub: AI Summarizer">
+								View on GitHub <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+							</a>
+						</div>
+					</article>
+
+					<article class="project">
+						<div class="project-number" aria-hidden="true">04</div>
+						<div class="project-content">
+							<div class="project-heading"><h3>React UI Templates</h3></div>
+							<p>
+								This one came from a much more practical problem. While freelancing, I found myself repeatedly building the same CRUD screens and UI patterns. Instead of continuing to copy and paste, I built a reusable UI system driven by JSON configuration.
+							</p>
+							<p>It reduced repetitive implementation, helped me deliver more within the same constraints, and left more time for the parts that actually needed engineering.</p>
+						</div>
+						<div class="project-aside">
+							<span class="project-aside-label">Engineering highlight</span>
+							<p>Created a reusable React UI system that renders CRUD workflows from JSON configuration.</p>
+							<ul class="tags" aria-label="Technologies and focus areas">
+								<li>React</li><li>JSON</li><li>UI</li><li>Architecture</li>
+							</ul>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ INTERESTS ============ -->
+		<section id="interests" class="chapter interests" aria-labelledby="interests-title">
+			<div class="chapter-inner">
+				<div>
+					<div class="chapter-label"><span aria-hidden="true">04</span><span>INTERESTS</span></div>
+					<h2 id="interests-title" class="section-title">What I'm<br />interested in.</h2>
+				</div>
+				<div class="principles">
+					<article class="principle">
+						<div class="principle-number" aria-hidden="true">01</div>
+						<div>
+							<h3>AI, beyond the LLM</h3>
+							<p>Understanding the fundamentals, figuring out when to use an LLM, a simpler ML model, or something else, and exploring evaluation, context, and agents.</p>
+						</div>
+					</article>
+					<article class="principle">
+						<div class="principle-number" aria-hidden="true">02</div>
+						<div>
+							<h3>Engineering trade-offs</h3>
+							<p>Being technology-agnostic, weighing trade-offs, and choosing the right approach for the problem — with scalability, performance, and maintenance in mind.</p>
+						</div>
+					</article>
+					<article class="principle">
+						<div class="principle-number" aria-hidden="true">03</div>
+						<div>
+							<h3>Making useful things</h3>
+							<p>Games, tools, scripts, automations, or anything else that solves a problem. Big or small, I enjoy making things that are useful.</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ TESTIMONIALS ============ -->
+		<section id="people" class="chapter people" aria-labelledby="people-title">
+			<div class="chapter-inner">
+				<div class="chapter-label"><span aria-hidden="true">05</span><span>TESTIMONIALS</span></div>
+				<h2 id="people-title" class="section-title">People I've<br />worked with.</h2>
+
+				<div class="quotes">
+					<figure class="quote">
+						<blockquote>Deepak consistently showed strong technical skills and a solid grasp of application development and system architecture.</blockquote>
+						<figcaption>Rahul Vijayvergiya<br />Technical Architect - KGL</figcaption>
+					</figure>
+					<figure class="quote">
+						<blockquote>Deepak is one of the best developers I have ever worked with. He is pro-active, takes ownership, and his communication is top-notch.</blockquote>
+						<figcaption>Harsh Gupta<br />Deputy CEO and Board Member - Wysa</figcaption>
+					</figure>
+					<figure class="quote">
+						<blockquote>He is a great team player that can fit in any project!</blockquote>
+						<figcaption>Simon Carbajal<br />Software Developer - Tweddle</figcaption>
+					</figure>
+					<figure class="quote">
+						<blockquote>His proactive approach to sharing knowledge and mentoring junior team members has significantly contributed to our team's overall growth.</blockquote>
+						<figcaption>Kaushik Bhaiya<br />Product Manager - Wysa</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ CONTACT ============ -->
+		<section id="contact" class="chapter contact" aria-labelledby="contact-title">
+			<div class="chapter-inner">
+				<div class="chapter-label"><span aria-hidden="true">06</span><span>CONTACT</span></div>
+
+				<div class="contact-copy">
+					<h2 id="contact-title">Let’s build<br />something<br /><em>together.</em></h2>
+
+					<div class="contact-text">
+						<p>
+							I'm interested in working with people who have a problem worth solving — whether that's a difficult engineering challenge or something in a business that feels unnecessarily manual, time-consuming, or inefficient.
+						</p>
+						<p>
+							It could be an AI workflow, an automation, a website, an internal tool, a mobile app, a reporting system, or something completely different.
+						</p>
+						<p>If you have something in mind, tell me about it. We can figure out what makes sense from there.</p>
+
+						<div class="contact-links">
+							<a href="mailto:deepakterse230196@gmail.com?subject=Exploring%20an%20opportunity%20with%20Deepak&body=Hi%20Deepak%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect%20about%20something%20I%20have%20in%20mind.%0A%0A%5BYour%20message%5D%0A%0ABest%2C%0A%5BYour%20name%5D">
+    						Send me an email →
+  						</a>
+
+  						<a href="https://wa.me/918097872267?text=Hi%20Deepak%2C%20I%20came%20across%20your%20portfolio%20and%20wanted%20to%20discuss%20something%20with%20you.%20Here%27s%20what%20I%20have%20in%20mind%3A" target="_blank" rel="noopener noreferrer">
+    						Start a WhatsApp chat →
+  						</a>
+
+  						<a href="https://www.linkedin.com/in/deepak-terse" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+								Connect on LinkedIn →
+  						</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<!-- ============ FOOTER ============ -->
+	<footer class="site-footer">
+		<div class="site-footer-inner">
+			<span>© 2026 Deepak Terse</span>
+			<div class="footer-socials">
+				<a href="https://github.com/deepak-terse" target="_blank" rel="noopener noreferrer">GitHub</a>
+				<a href="https://www.linkedin.com/in/deepak-terse/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+			</div>
 		</div>
-		<div id = "image" class = "section">
-			<img loading="lazy" width="500" height="500" src="./assets/images/man_coding.webp" alt="deepak coding">
-		</div>
-    </body>
+	</footer>
+
+	<!-- ============ FIXED UI: chapter dots + theme toggle ============ -->
+	<nav class="chapter-nav" aria-label="Chapters">
+		<a href="#hero" aria-label="01 — Hero" aria-current="location"><span class="dot-label">Hero</span></a>
+		<a href="#about" aria-label="02 — About"><span class="dot-label">A little about me</span></a>
+		<a href="#timeline" aria-label="03 — Experience"><span class="dot-label">A brief timeline</span></a>
+		<a href="#projects" aria-label="04 — Projects"><span class="dot-label">Things I've built</span></a>
+		<a href="#interests" aria-label="05 — Interests"><span class="dot-label">What I'm interested in</span></a>
+		<a href="#people" aria-label="06 — Testimonials"><span class="dot-label">People I've worked with</span></a>
+		<a href="#contact" aria-label="07 — Contact"><span class="dot-label">Let's build something together</span></a>
+	</nav>
+
+	<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+		<span class="theme-toggle-label">Toggle theme</span>
+		<svg class="icon" aria-hidden="true"><use href="#i-sun" /></svg>
+	</button>
+</body>
 </html>
