@@ -7,15 +7,15 @@
 ========================================================= */
 
 /* 1 TOKENS
-   Default = system theme (data-theme="system"), switched by the toggle to light/dark. */
+   The default follows the system theme; an explicit saved theme overrides it. */
 :root {
 	color-scheme: light dark;
 	--bg: #f3f5f6;
 	--surface: #e9edef;
 	--fg: #182027;
 	--muted: #5f6b74;
-	--accent: #527d8d;
-	--accent-text: #456b79;
+	--accent: #f2511a;
+	--accent-text: #b83d13;
 	--accent-soft: #456b79;
 	--border: #c9d1d5;
 	--border-strong: #adb9bf;
@@ -47,8 +47,8 @@ html[data-theme="dark"] {
 		--surface: #232a34;
 		--fg: #edeef2;
 		--muted: #b5bccb;
-		--accent: #adc6d0;
-		--accent-text: #adc6d0;
+		--accent: #f2511a;
+		--accent-text: #f2511a;
 		--accent-soft: #7897a5;
 		--border: #485362;
 		--border-strong: #5d6978;

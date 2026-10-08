@@ -7,6 +7,14 @@ const toggleIcon = toggle.querySelector("use");
 const themeColor = document.querySelector('meta[name="theme-color"]');
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
+let followsSystem = true;
+try {
+	const savedTheme = localStorage.getItem("deepak-theme");
+	followsSystem = savedTheme !== "light" && savedTheme !== "dark";
+} catch {
+	// Without storage, follow the system until the visitor chooses a theme.
+}
+
 const currentTheme = () =>
 	root.dataset.theme === "system"
 		? (prefersDark.matches ? "dark" : "light")
@@ -22,6 +30,7 @@ const syncTheme = () => {
 toggle.addEventListener("click", () => {
 	const next = currentTheme() === "dark" ? "light" : "dark";
 	root.dataset.theme = next;
+	followsSystem = false;
 	try {
 		localStorage.setItem("deepak-theme", next);
 	} catch {
@@ -30,7 +39,10 @@ toggle.addEventListener("click", () => {
 	syncTheme();
 });
 
-prefersDark.addEventListener("change", syncTheme);
+prefersDark.addEventListener("change", () => {
+	if (!followsSystem) return;
+	syncTheme();
+});
 syncTheme();
 
 /* =========================================================
