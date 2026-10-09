@@ -112,13 +112,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .hero .muted { max-width: 30rem; margin-top: 1.3rem; font-size: 1.05rem; line-height: 1.75; }
 .hero-links { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 2.5rem; font-size: .9375rem; }
 .hero-links a { position: relative; }
-.hero-link, .resume-download { display: inline-flex; align-items: center; gap: .5rem; }
-.hero-link svg, .resume-download svg { width: 1.1rem; height: 1.1rem; flex: 0 0 auto; }
+.hero-link { display: inline-flex; align-items: center; gap: .5rem; }
+.hero-link svg { width: 1.1rem; height: 1.1rem; flex: 0 0 auto; }
 .hero-link .external-icon { width: .65rem; height: .65rem; margin-left: -.25rem; }
 .hero-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.4rem; height: 1px; background: var(--accent); transform: scaleX(.35); transform-origin: left; transition: transform .25s ease; }
 .hero-link:hover::after, .hero-link:focus-visible::after { transform: scaleX(1); }
-.resume-download { padding: .7rem .95rem; border: 1px solid var(--border-strong); border-radius: 3px; color: var(--fg); font-size: .875rem; transition: background-color .25s ease, border-color .25s ease, color .25s ease; }
-.resume-download:hover, .resume-download:focus-visible { background: var(--accent-text); border-color: var(--accent-text); color: var(--bg); }
 .portrait { position: relative; display: flex; align-items: stretch; justify-self: end; width: min(100%, 430px); height: min(calc(100svh - 4rem), 760px); max-height: 100%; padding: 9px; background: var(--surface); border: 1px solid var(--border); transform: rotate(2deg); }
 .portrait::before { content: ""; position: absolute; inset: 7% -7% -7% 7%; border: 1px solid var(--border-strong); transform: rotate(-2deg); pointer-events: none; }
 .portrait img { position: relative; z-index: 1; display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: center; filter: saturate(.8) contrast(.97); }
