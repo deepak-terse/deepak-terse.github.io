@@ -71,6 +71,26 @@ chapterInners.forEach((inner) => reveal.observe(inner));
 ========================================================= */
 const links = [...document.querySelectorAll(".chapter-nav a")];
 let activeUpdatePending = false;
+let trackedSectionId = null;
+let sectionStartedAt = null;
+
+const finishSectionTiming = () => {
+	if (!trackedSectionId || sectionStartedAt === null) return;
+
+	const durationSeconds = Math.round((performance.now() - sectionStartedAt) / 1000);
+	sectionStartedAt = null;
+	if (durationSeconds < 1) return;
+
+	window.umami?.track("section-time", {
+		section: trackedSectionId,
+		duration_seconds: durationSeconds,
+	});
+};
+
+const startSectionTiming = () => {
+	if (document.visibilityState !== "visible" || !trackedSectionId || sectionStartedAt !== null) return;
+	sectionStartedAt = performance.now();
+};
 
 const updateActiveChapter = () => {
 	activeUpdatePending = false;
@@ -83,6 +103,17 @@ const updateActiveChapter = () => {
 	}
 
 	if (!currentSection) return;
+	if (currentSection.getBoundingClientRect().bottom <= activationLine) {
+		finishSectionTiming();
+		trackedSectionId = null;
+	} else {
+		if (currentSection.id !== trackedSectionId) {
+			finishSectionTiming();
+			trackedSectionId = currentSection.id;
+		}
+		startSectionTiming();
+	}
+
 	links.forEach((link) => {
 		if (link.hash === `#${currentSection.id}`) {
 			link.setAttribute("aria-current", "location");
@@ -100,4 +131,13 @@ const scheduleActiveUpdate = () => {
 
 window.addEventListener("scroll", scheduleActiveUpdate, { passive: true });
 window.addEventListener("resize", scheduleActiveUpdate);
+document.addEventListener("visibilitychange", () => {
+	if (document.visibilityState === "hidden") {
+		finishSectionTiming();
+	} else {
+		updateActiveChapter();
+	}
+});
+window.addEventListener("pagehide", finishSectionTiming);
+window.addEventListener("pageshow", updateActiveChapter);
 updateActiveChapter();
